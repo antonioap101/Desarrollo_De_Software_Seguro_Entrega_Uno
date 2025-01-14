@@ -1,0 +1,8 @@
+{
+    "insecure_users": {
+        "user1": "password123"
+    },
+    "secure_users": {
+        "user2": "$2b$12$orURp8SUSsJiMINovr3f7OfxSNK5geDKp28Ke2no74VAJmvLd7uK6"
+    }
+}

@@ -124,7 +124,7 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
 
 <div align="center">
     <img src="readme-assets/1_buffer_overflow_execution.png" alt="" width="399"/>
-    <p><em>Figura 1: Ejecución del código mostrando el error de "stack smashing".</em></p>
+    <p><em>Figura 2: Ejecución del código mostrando el error de "stack smashing".</em></p>
 </div>
 
 - **Resultados sin Protecciones Activas**: Al compilar el programa desactivando las protecciones del compilador con el
@@ -134,7 +134,7 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
 
 <div align="center">
     <img src="readme-assets/1_buffer_overflow_execution_unprotected.png" alt="" width="388"/>
-    <p><em>Figura 2: Ejecución del código sin protecciones mostrando un error de segmentación.</em></p>
+    <p><em>Figura 3: Ejecución del código sin protecciones mostrando un error de segmentación.</em></p>
 </div>
 
 Esto demuestra que, sin las protecciones activas, el desbordamiento puede generar comportamientos impredecibles o
@@ -161,7 +161,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 <div align="center">
     <img src="readme-assets/unchecked-return-value-java.png" alt="Unchecked Return Value Example in Java" width="809"/>
-    <p><em>Figura 3: Ejemplo de vulnerabilidad al ignorar el valor de retorno en Java.</em></p>
+    <p><em>Figura 4: Ejemplo de vulnerabilidad al ignorar el valor de retorno en Java.</em></p>
 </div>
 
 ---
@@ -176,7 +176,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 <div align="center">
     <img src="readme-assets/misused-exception-handling-python.png" alt="Often Misused: Exception Handling Example in Python" width="1772"/>
-    <p><em>Figura 4: Ejemplo de manejo incorrecto y adecuado de excepciones en Python.</em></p>
+    <p><em>Figura 5: Ejemplo de manejo incorrecto y adecuado de excepciones en Python.</em></p>
 </div>
 
 ---
@@ -208,11 +208,11 @@ Ambos ejemplos destacan la importancia de manejar correctamente las interaccione
     <img src="readme-assets/hard_coded_passwords_1.png" alt="Hard-Coded Password Example 1" width="300"/>
     <img src="readme-assets/hard_coded_passwords_2.png" alt="Hard-Coded Password Example 2" width="300"/>
     <img src="readme-assets/hard_coded_passwords_3.png" alt="Hard-Coded Password Example 3" width="300"/>
-    <p><em>Figura 5: Ejemplos de vulnerabilidad causada por contraseñas hard-coded en Javascript.</em></p>
+    <p><em>Figura 6: Ejemplos de vulnerabilidad causada por contraseñas hard-coded en Javascript.</em></p>
 </div>
 <div align="center">
     <img src="readme-assets/hard_coded_passwords_4.png" alt="Hard-Coded Password Example 4" width="774"/>
-    <p><em>Figura 6: Ejemplo adicional de vulnerabilidad causada por contraseñas hard-coded en Python.</em></p>
+    <p><em>Figura 7: Ejemplo adicional de vulnerabilidad causada por contraseñas hard-coded en Python.</em></p>
 </div>
 
 ---
@@ -246,7 +246,7 @@ Ambos ejemplos destacan la importancia de manejar correctamente las interaccione
 
 <div align="center">
     <img src="readme-assets/password-storage-secure-vs-insecure.png" alt="Password Management Secure vs Insecure" width="654"/>
-    <p><em>Figura 6: Comparación entre almacenamiento seguro e inseguro de contraseñas.</em></p>
+    <p><em>Figura 8: Comparación entre almacenamiento seguro e inseguro de contraseñas.</em></p>
 </div>
 
 ---
@@ -279,7 +279,7 @@ Ambos ejemplos destacan la importancia de manejar correctamente las interaccione
 
 <div align="center">
     <img src="readme-assets/deadlock-example.png" alt="Deadlock Example" width="775"/>
-    <p><em>Figura 7: Ejemplo de bloqueo mutuo entre dos hilos que resulta en un deadlock.</em></p>
+    <p><em>Figura 9: Ejemplo de bloqueo mutuo entre dos hilos que resulta en un deadlock.</em></p>
 </div>
 
 ---
@@ -322,7 +322,7 @@ En esta sección se aborda el impacto de ignorar o manejar incorrectamente los e
 
 <div align="center">
     <img src="readme-assets/empty-catch-block-comparison.png" alt="Empty Catch Block Example" width="1050"/>
-    <p><em>Figura 7: Comparación entre el manejo seguro e inseguro de excepciones en Python.</em></p>
+    <p><em>Figura 10: Comparación entre el manejo seguro e inseguro de excepciones en Python.</em></p>
 </div>
 
 ---
@@ -347,7 +347,7 @@ En esta sección, se abordan cinco ejemplos clásicos de problemas relacionados 
 
 <div align="center">
     <img src="readme-assets/double_free.png" alt="Double Free Execution" width="730"/>
-    <p><em>Figura 7: Ejecución del ejemplo de Double Free en C, mostrando el mensaje de error debido al intento de liberar memoria ya liberada.</em></p>
+    <p><em>Figura 11: Ejecución del ejemplo de Double Free en C, mostrando el mensaje de error debido al intento de liberar memoria ya liberada.</em></p>
 </div>
 
 ---
@@ -359,7 +359,7 @@ En esta sección, se abordan cinco ejemplos clásicos de problemas relacionados 
 
 <div align="center">
    <img src="readme-assets/memory_leak.png" alt="Memory Leak Valgrind Output" width="1492"/>
-   <p><em>Figura X: Resultado de la ejecución con Valgrind. Se observa que 40 bytes de memoria han quedado sin liberar 
+   <p><em>Figura 12: Resultado de la ejecución con Valgrind. Se observa que 40 bytes de memoria han quedado sin liberar 
 ("definitely lost"), asignados en la función <code>memoryLeakExample</code>. Esto confirma la presencia de una fuga
 de memoria debido a la falta de liberación explícita con <code>delete[]</code>.</em>
 </p> 
@@ -374,7 +374,7 @@ de memoria debido a la falta de liberación explícita con <code>delete[]</code>
 
 <div align="center">
     <img src="readme-assets/null_dereference.png" alt="Null Dereference Execution" width="806"/>
-    <p><em>Figura 9: Ejecución del ejemplo de Null Dereference en C++, donde el intento de desreferenciar un puntero nulo resulta en un fallo de segmentación.</em></p>
+    <p><em>Figura 13: Ejecución del ejemplo de Null Dereference en C++, donde el intento de desreferenciar un puntero nulo resulta en un fallo de segmentación.</em></p>
 </div>
 
 ---
@@ -386,7 +386,7 @@ de memoria debido a la falta de liberación explícita con <code>delete[]</code>
 
 <div align="center">
     <img src="readme-assets/use_after_free.png" alt="Use After Free Execution" width="779"/>
-    <p><em>Figura 10: Ejecución del ejemplo de Use After Free en C, mostrando resultados impredecibles al intentar acceder a memoria liberada.</em></p>
+    <p><em>Figura 14: Ejecución del ejemplo de Use After Free en C, mostrando resultados impredecibles al intentar acceder a memoria liberada.</em></p>
 </div>
 
 ---
@@ -398,7 +398,7 @@ de memoria debido a la falta de liberación explícita con <code>delete[]</code>
 
 <div align="center">
     <img src="readme-assets/uninitialized_variable.png" alt="Uninitialized Variable Execution" width="828"/>
-    <p><em>Figura 11: Ejecución del ejemplo de Uninitialized Variable en C, donde se muestra un valor aleatorio impredecible.</em></p>
+    <p><em>Figura 15: Ejecución del ejemplo de Uninitialized Variable en C, donde se muestra un valor aleatorio impredecible.</em></p>
 </div>
 
 ---
@@ -449,7 +449,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
    <div align="center">
        <img src="readme-assets/trust-boundary-violation.png" alt="Trust Boundary Violation Example" width="1135"/>
-       <p><em>Figura X: Ejemplo de violación de límites de confianza en Java.</em></p>
+       <p><em>Figura 16: Ejemplo de violación de límites de confianza en Java.</em></p>
    </div>
 
    - **Comentario**: Este ejemplo demuestra cómo la falta de separación entre datos validados y no validados puede comprometer la seguridad del sistema. Al no distinguir claramente entre ellos, se permite que datos no validados se usen en operaciones críticas.
@@ -461,7 +461,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
    <div align="center">
        <img src="readme-assets/private-array-returned-as-reference.png" alt="Private Array Returned Example" width="1080"/>
-       <p><em>Figura Y: Ejemplo de retorno de un array privado que permite modificaciones inesperadas.</em></p>
+       <p><em>Figura 17: Ejemplo de retorno de un array privado que permite modificaciones inesperadas.</em></p>
    </div>
 
    - **Comentario**: Este ejemplo ilustra cómo devolver referencias directas a arrays privados puede comprometer la encapsulación de la clase, permitiendo a usuarios externos alterar su estado interno.
@@ -473,7 +473,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
    <div align="center">
        <img src="readme-assets/public-data-assigned-to-private-array.png" alt="Public Data Assigned Example" width="1015"/>
-       <p><em>Figura Z: Ejemplo de asignación de datos públicos a arrays privados, comprometiendo su privacidad.</em></p>
+       <p><em>Figura 18: Ejemplo de asignación de datos públicos a arrays privados, comprometiendo su privacidad.</em></p>
    </div>
 
    - **Comentario**: Este ejemplo demuestra cómo la dependencia de datos públicos puede afectar directamente la privacidad y seguridad del estado interno de una clase, exponiéndola a manipulación no intencionada.

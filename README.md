@@ -1,11 +1,11 @@
 # Desarrollo de Software Seguro: Análisis de Vulnerabilidades
 
-
 - [Desarrollo de Software Seguro: Análisis de Vulnerabilidades](#desarrollo-de-software-seguro-análisis-de-vulnerabilidades)
     - [Introducción](#introducción)
     - [Fundamentos Teóricos](#fundamentos-teóricos)
       - [Software Seguro y Resiliente](#software-seguro-y-resiliente)
       - [Errores Más Comunes](#errores-más-comunes)
+      - [Vulnerabilidades Destacadas con Ejemplos Prácticos](#vulnerabilidades-destacadas-con-ejemplos-prácticos)
     - [Desarrollo](#desarrollo)
       - [1. Input Validation and Representation](#1-input-validation-and-representation)
         - [Problemas Seleccionados](#problemas-seleccionados)
@@ -13,7 +13,6 @@
       - [2. API Abuse](#2-api-abuse)
         - [Problemas Seleccionados](#problemas-seleccionados-1)
         - [Comparativa de Resultados](#comparativa-de-resultados-1)
-  - [](#)
       - [3. Security Features](#3-security-features)
         - [Problemas Seleccionados](#problemas-seleccionados-2)
         - [Comparativa de Resultados](#comparativa-de-resultados-2)
@@ -121,16 +120,30 @@ A continuación, se presenta una tabla con el ranking de vulnerabilidades, de la
 | 24       | CWE-400  | Uncontrolled Resource Consumption                                                          | 3.23      | 0               | +13                      |
 | 25       | CWE-306  | Missing Authentication for Critical Function                                               | 2.73      | 5               | -5                       |
 
-Algunos ejemplos destacados son:
 
-1. **CWE-79**: Cross-site Scripting (XSS): Neutralización inapropiada de entradas durante la generación de páginas web.
-2. **CWE-787**: Escritura fuera de los límites de memoria.
-3. **CWE-89**: Inyección SQL: Neutralización incorrecta de elementos especiales en comandos SQL.
-4. **CWE-352**: Cross-Site Request Forgery (CSRF): Peticiones no autorizadas realizadas desde un navegador autenticado.
-5. **CWE-22**: Path Traversal: Limitación inadecuada de rutas de acceso.
+#### Vulnerabilidades Destacadas con Ejemplos Prácticos
 
-Estos errores pertenecen a diferentes categorías de vulnerabilidades, como la validación de entradas, el manejo
-incorrecto de memoria y el abuso de APIs, que se analizan también en los "Seven Pernicious Kingdoms".
+1. **CWE-416: Use After Free**
+    - **Descripción**: Este error ocurre cuando se accede a memoria ya liberada, lo que puede provocar comportamientos impredecibles o permitir ataques.
+    - **Ejemplo y análisis detallado**: [Use After Free](#6-code-quality)
+
+2. **CWE-20: Improper Input Validation**
+    - **Descripción**: La validación inadecuada de entradas permite que datos maliciosos interactúen con el sistema de manera insegura.
+    - **Ejemplo y análisis detallado**: [Improper Input Validation](#1-input-validation-and-representation)
+
+3. **CWE-476: NULL Pointer Dereference**
+    - **Descripción**: Intentar acceder a un puntero nulo puede provocar fallos críticos o interrupciones del sistema.
+    - **Ejemplo y análisis detallado**: [NULL Pointer Dereference](#6-code-quality)
+
+4. **CWE-798: Use of Hard-coded Credentials**
+    - **Descripción**: Contraseñas incrustadas directamente en el código facilitan el acceso no autorizado al sistema.
+    - **Ejemplo y análisis detallado**: [Use of Hard-coded Credentials](#3-security-features)
+
+5. **CWE-190: Integer Overflow or Wraparound**
+    - **Descripción**: Errores en cálculos numéricos pueden provocar desbordamientos, comprometiendo la lógica del programa.
+    - **Ejemplo y análisis detallado**: [Integer Overflow](#1-input-validation-and-representation)
+    - 
+Estos errores pertenecen a diferentes categorías de vulnerabilidades, como la validación de entradas, el manejo incorrecto de memoria y el abuso de APIs, que se analizan también en los "Seven Pernicious Kingdoms".
 
 ### Desarrollo
 
@@ -140,26 +153,35 @@ que afectan la calidad y seguridad del software. En esta sección, se incluyen e
 categorías que ilustran vulnerabilidades de entrada, representación, y otras, demostrando cómo se manifiestan en
 entornos reales.
 
-#### 1. Input Validation and Representation
+#### 1. Input Validation and Representation 
 
 A continuación, se han seleccionado algunos ejemplos correspondientes al primer reino **Input Validation and
 Representation**, que incluye errores derivados de confiar en entradas no validadas y representaciones inapropiadas.
 
 ##### Problemas Seleccionados
 
-
-1. **Desbordamiento de Buffer**
+1. **Desbordamiento de Buffer (CWE-20)** 
     - **Vulnerabilidad**: Falta de verificación de límites al trabajar con memoria.
     - **Descripción**: Este ejemplo demuestra cómo un desbordamiento de buffer puede corromper datos o permitir la ejecución de código malicioso.
     - **Lenguaje**: C
     - **Ubicación del Ejemplo**: [examples/1_input_representation_and_validation/buffer_overflow/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/1_input_representation_and_validation/buffer_overflow/)
 ---
 
-2. **SQL Injection**
+2. **SQL Injection (CWE-20)**
     - **Vulnerabilidad**: La construcción de sentencias SQL dinámicas con entradas no validadas permite a un atacante modificar el significado de la consulta o ejecutar comandos arbitrarios.
     - **Descripción**: Este ejemplo compara el uso de una consulta SQL dinámica insegura frente a un enfoque seguro utilizando consultas preparadas con parámetros.
     - **Lenguaje**: Python
     - **Ubicación del Ejemplo**: [examples/1_input_representation_and_validation/sql_injection/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/1_input_representation_and_validation/sql_injection/)
+
+---
+
+3. **Integer Overflow (CWE-20)**
+    - **Vulnerabilidad**: Un Integer Overflow ocurre cuando una operación aritmética produce un resultado que excede el rango máximo o mínimo del tipo de dato numérico utilizado.
+    - **Descripción**: Este ejemplo ilustra cómo el uso de operaciones aritméticas sin validar puede generar valores inesperados o incluso comportamientos no deseados, dependiendo del tipo de dato numérico (`int`, `unsigned int`, `short`, `long`, etc.).
+    - **Lenguaje**: C
+    - **Ubicación del Ejemplo**: [examples/1_input_representation_and_validation/integer_overflow/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/1_input_representation_and_validation/integer_overflow/)
+
+---
 
 
 ##### Comparativa de Resultados
@@ -190,13 +212,17 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
         - En la consulta segura, la entrada es tratada como texto literal, evitando la ejecución maliciosa.
 
   <div align="center">
-      <img src="readme-assets/sql_injection.png" alt="SQL Injection Example" width="500"/>
+      <img src="readme-assets/sql_injection.png" alt="SQL Injection Example" width="1818"/>
       <p><em>Figura 4: Ejemplo de SQL Injection, destacando la isportancia de consultas con validación adecuada de la entrada del usuario.</em></p>
   </div>
+  
+3. **Integer Overflow**:
+   <div align="center">
+       <img src="readme-assets/integer_overflow.png" alt="Integer Overflow Example" width="600"/>
+       <p><em>Figura 5: Ejemplo de Integer Overflow mostrando cómo operaciones aritméticas pueden exceder los límites de los tipos de datos numéricos. Esto puede llevar a valores inesperados o comportamientos indeseados en el sistema.</em></p>
+   </div>
 
-
-Esto demuestra que, sin las protecciones activas, el desbordamiento puede generar comportamientos impredecibles o
-provocar el crasheo de la aplicación.
+Esto demuestra que, sin las protecciones activas, el desbordamiento puede generar comportamientos impredecibles o provocar el crasheo de la aplicación.
 
 #### 2. API Abuse
 
@@ -238,7 +264,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
        <img src="readme-assets/misused-exception-handling-python.png" alt="Often Misused: Exception Handling Example in Python" width="1772"/>
        <p><em>Figura 5: Ejemplo de manejo incorrecto y adecuado de excepciones en Python. Capturar excepciones genéricas o no manejar errores específicos puede ocultar problemas críticos y llevar a comportamientos inesperados.</em></p>
    </div>
----
+
 
 
 #### 3. Security Features

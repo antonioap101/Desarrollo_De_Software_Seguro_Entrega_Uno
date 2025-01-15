@@ -487,13 +487,13 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
    - **Vulnerabilidad**: Devolver un array privado como referencia desde un método público puede permitir modificaciones inesperadas del contenido privado desde fuera de la clase.
    - **Descripción**: Este ejemplo ilustra cómo devolver referencias directas a arrays privados puede comprometer la encapsulación de la clase, permitiendo a usuarios externos alterar su estado interno.
    - **Lenguaje**: C++
-   - **Ubicación del Ejemplo**: [examples/7_encapsulation/private_array_returned/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/7_encapsulation/private_array_returned/)
+   - **Ubicación del Ejemplo**: [examples/7_encapsulation/private_array_typed_field_returned_from_public_method/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/7_encapsulation/private_array_typed_field_returned_from_public_method/)
 
 3. **Public Data Assigned to Private Array-Typed Field**
    - **Vulnerabilidad**: Asignar datos públicos a un array privado permite que los datos internos reflejen cambios en las variables externas, comprometiendo la privacidad de la información.
    - **Descripción**: Este ejemplo demuestra cómo la dependencia de datos públicos puede afectar directamente la privacidad y seguridad del estado interno de una clase, exponiéndola a manipulación no intencionada.
    - **Lenguaje**: C++
-   - **Ubicación del Ejemplo**: [examples/7_encapsulation/public_data_assigned/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/7_encapsulation/public_data_assigned/)
+   - **Ubicación del Ejemplo**: [examples/7_encapsulation/public_data_assigned_to_private_array_typed_field/](https://github.com/antonioap101/Desarrollo_De_Software_Seguro_Entrega_Uno/tree/main/examples/7_encapsulation/public_data_assigned_to_private_array_typed_field/)
 
 ---
 

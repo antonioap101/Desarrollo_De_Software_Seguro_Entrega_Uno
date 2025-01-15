@@ -1,39 +1,41 @@
 # Desarrollo de Software Seguro: Análisis de Vulnerabilidades
 
-- [Desarrollo de Software Seguro: Análisis de Vulnerabilidades](#desarrollo-de-software-seguro-análisis-de-vulnerabilidades)
-    - [Introducción](#introducción)
-    - [Fundamentos Teóricos](#fundamentos-teóricos)
-      - [Software Seguro y Resiliente](#software-seguro-y-resiliente)
-      - [Errores Más Comunes](#errores-más-comunes)
-      - [Vulnerabilidades Destacadas con Ejemplos Prácticos](#vulnerabilidades-destacadas-con-ejemplos-prácticos)
-    - [Desarrollo](#desarrollo)
-      - [1. Input Validation and Representation](#1-input-validation-and-representation)
-        - [Problemas Seleccionados](#problemas-seleccionados)
-        - [Comparativa de Resultados](#comparativa-de-resultados)
-      - [2. API Abuse](#2-api-abuse)
-        - [Problemas Seleccionados](#problemas-seleccionados-1)
-        - [Comparativa de Resultados](#comparativa-de-resultados-1)
-      - [3. Security Features](#3-security-features)
-        - [Problemas Seleccionados](#problemas-seleccionados-2)
-        - [Comparativa de Resultados](#comparativa-de-resultados-2)
-      - [4. Time and State](#4-time-and-state)
-        - [Problemas Seleccionados](#problemas-seleccionados-3)
-        - [Comparativa de Resultados](#comparativa-de-resultados-3)
-      - [5. Errors](#5-errors)
-        - [Problemas Seleccionados](#problemas-seleccionados-4)
-        - [Comparativa de Resultados](#comparativa-de-resultados-4)
-      - [6. Code Quality](#6-code-quality)
-        - [Problemas Seleccionados](#problemas-seleccionados-5)
-        - [Ejecución y Análisis](#ejecución-y-análisis)
-        - [Comparativa de Resultados](#comparativa-de-resultados-5)
-      - [7. Encapsulation](#7-encapsulation)
-        - [Problemas Seleccionados](#problemas-seleccionados-6)
-        - [Comparativa de Resultados](#comparativa-de-resultados-6)
-    - [Reflexiones y Conclusiones](#reflexiones-y-conclusiones)
-    - [Bibliografía](#bibliografía)
+## Índice de contenidos
+
+- [Índice de contenidos](#índice-de-contenidos)
+- [Introducción](#introducción)
+- [Fundamentos Teóricos](#fundamentos-teóricos)
+  - [Software Seguro y Resiliente](#software-seguro-y-resiliente)
+  - [Errores Más Comunes](#errores-más-comunes)
+  - [Vulnerabilidades Destacadas con Ejemplos Prácticos](#vulnerabilidades-destacadas-con-ejemplos-prácticos)
+- [Desarrollo](#desarrollo)
+  - [1. Input Validation and Representation](#1-input-validation-and-representation)
+    - [Problemas Seleccionados](#problemas-seleccionados)
+    - [Comparativa de Resultados](#comparativa-de-resultados)
+  - [2. API Abuse](#2-api-abuse)
+    - [Problemas Seleccionados](#problemas-seleccionados-1)
+    - [Comparativa de Resultados](#comparativa-de-resultados-1)
+  - [3. Security Features](#3-security-features)
+    - [Problemas Seleccionados](#problemas-seleccionados-2)
+    - [Comparativa de Resultados](#comparativa-de-resultados-2)
+  - [4. Time and State](#4-time-and-state)
+    - [Problemas Seleccionados](#problemas-seleccionados-3)
+    - [Comparativa de Resultados](#comparativa-de-resultados-3)
+  - [5. Errors](#5-errors)
+    - [Problemas Seleccionados](#problemas-seleccionados-4)
+    - [Comparativa de Resultados](#comparativa-de-resultados-4)
+  - [6. Code Quality](#6-code-quality)
+    - [Problemas Seleccionados](#problemas-seleccionados-5)
+    - [Ejecución y Análisis](#ejecución-y-análisis)
+    - [Comparativa de Resultados](#comparativa-de-resultados-5)
+  - [7. Encapsulation](#7-encapsulation)
+    - [Problemas Seleccionados](#problemas-seleccionados-6)
+    - [Comparativa de Resultados](#comparativa-de-resultados-6)
+- [Reflexiones y Conclusiones](#reflexiones-y-conclusiones)
+- [Bibliografía](#bibliografía)
 
 
-### Introducción
+## Introducción
 
 El desarrollo de software seguro es una disciplina esencial en la ingeniería de software moderna, especialmente en un
 contexto donde las aplicaciones están cada vez más expuestas a entornos diversos y potencialmente hostiles. Este trabajo
@@ -56,9 +58,9 @@ Con esta metodología, el trabajo pretende proporcionar un aprendizaje práctico
 el desarrollo de software seguro, ayudando a prevenir errores comunes y a diseñar aplicaciones resilientes ante ataques
 y usos indebidos.
 
-### Fundamentos Teóricos
+## Fundamentos Teóricos
 
-#### Software Seguro y Resiliente
+### Software Seguro y Resiliente
 
 Un software seguro y resiliente se caracteriza por su capacidad para proteger la información y los recursos frente a
 accesos no autorizados, ataques malintencionados y errores involuntarios. Entre sus propiedades fundamentales destacan:
@@ -70,7 +72,7 @@ accesos no autorizados, ataques malintencionados y errores involuntarios. Entre 
 - **Autorización**: Controla el acceso a recursos en función de permisos predefinidos.
 - **Auditoría**: Registra y monitorea las acciones para identificar actividades sospechosas.
 
-#### Errores Más Comunes
+### Errores Más Comunes
 
 Los errores más peligrosos según el **CWE/SANS Top 25** incluyen vulnerabilidades que suelen ser explotadas en
 aplicaciones modernas. Para 2024, de acuerdo con [MITRE](https://www.mitre.org/), el ranking de los mismos es el
@@ -121,7 +123,7 @@ A continuación, se presenta una tabla con el ranking de vulnerabilidades, de la
 | 25       | CWE-306  | Missing Authentication for Critical Function                                               | 2.73      | 5               | -5                       |
 
 
-#### Vulnerabilidades Destacadas con Ejemplos Prácticos
+### Vulnerabilidades Destacadas con Ejemplos Prácticos
 
 1. **CWE-416: Use After Free**
     - **Descripción**: Este error ocurre cuando se accede a memoria ya liberada, lo que puede provocar comportamientos impredecibles o permitir ataques.
@@ -145,7 +147,7 @@ A continuación, se presenta una tabla con el ranking de vulnerabilidades, de la
     - 
 Estos errores pertenecen a diferentes categorías de vulnerabilidades, como la validación de entradas, el manejo incorrecto de memoria y el abuso de APIs, que se analizan también en los "Seven Pernicious Kingdoms".
 
-### Desarrollo
+## Desarrollo
 
 El "Seven Pernicious Kingdoms" clasifica los errores de seguridad del software en siete categorías principales y una
 categoría adicional para problemas de configuración. Cada "reino" o categoría abarca distintos tipos de vulnerabilidades
@@ -153,12 +155,12 @@ que afectan la calidad y seguridad del software. En esta sección, se incluyen e
 categorías que ilustran vulnerabilidades de entrada, representación, y otras, demostrando cómo se manifiestan en
 entornos reales.
 
-#### 1. Input Validation and Representation 
+### 1. Input Validation and Representation 
 
 A continuación, se han seleccionado algunos ejemplos correspondientes al primer reino **Input Validation and
 Representation**, que incluye errores derivados de confiar en entradas no validadas y representaciones inapropiadas.
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 
 1. **Desbordamiento de Buffer (CWE-20)** 
     - **Vulnerabilidad**: Falta de verificación de límites al trabajar con memoria.
@@ -184,7 +186,7 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
 ---
 
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
 
 1. **Desbordamiento de Buffer**:
    - **Resultados con Protecciones Activas**: Cuando la entrada excede el tamaño del buffer (10 bytes), se produce un desbordamiento que desencadena un error de "stack smashing" detectado por las protecciones del compilador. Esto evidencia cómo un atacante podría explotar esta vulnerabilidad en sistemas sin protecciones adecuadas.
@@ -202,6 +204,10 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
   </div>
 
 2. **SQL Injection**:
+3.   <div align="center">
+      <img src="readme-assets/sql_injection.png" alt="SQL Injection Example" width="1200"/>
+      <p><em>Figura 4: Ejemplo de SQL Injection, destacando la isportancia de consultas con validación adecuada de la entrada del usuario.</em></p>
+  </div>
     - **Consulta Insegura**:
         - Las entradas del usuario sin validar se insertan directamente en una consulta SQL dinámica.
         - Un atacante puede ejecutar comandos SQL arbitrarios, accediendo o modificando información sensible.
@@ -211,10 +217,7 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
         - Un atacante que intente ejecutar `admin'--` en una consulta insegura obtendrá acceso indebido al sistema.
         - En la consulta segura, la entrada es tratada como texto literal, evitando la ejecución maliciosa.
 
-  <div align="center">
-      <img src="readme-assets/sql_injection.png" alt="SQL Injection Example" width="1818"/>
-      <p><em>Figura 4: Ejemplo de SQL Injection, destacando la isportancia de consultas con validación adecuada de la entrada del usuario.</em></p>
-  </div>
+
   
 3. **Integer Overflow**:
    <div align="center">
@@ -224,7 +227,7 @@ Representation**, que incluye errores derivados de confiar en entradas no valida
 
 Esto demuestra que, sin las protecciones activas, el desbordamiento puede generar comportamientos impredecibles o provocar el crasheo de la aplicación.
 
-#### 2. API Abuse
+### 2. API Abuse
 
 **API Abuse** se refiere al mal uso de una API, que actúa como un contrato entre el consumidor (caller) y el proveedor (
 callee). Este tipo de vulnerabilidades ocurre cuando una de las partes no cumple su rol, lo que puede resultar en un
@@ -235,7 +238,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 ---
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados 
 
 1. **Unchecked Return Value**
     - **Vulnerabilidad**: Ignorar los valores de retorno al utilizar una API puede llevar a estados inconsistentes o pérdida de control del flujo del programa.
@@ -251,7 +254,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 ---
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
 
 1. **Unchecked Return Value**:
    <div align="center">
@@ -267,11 +270,11 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 
 
-#### 3. Security Features
+### 3. Security Features
 
 **Security Features** aborda errores relacionados con la autenticación, control de acceso y gestión de contraseñas. En esta sección, se ilustra la vulnerabilidad **Password Management: Hard-Coded Password** comparando un enfoque inseguro (contraseñas sin hashear) con uno seguro (contraseñas hasheadas).
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 
 1. **Password Management: Hard-Coded Password (CWE-798)**
     - **Vulnerabilidad**: Contraseñas incrustadas directamente en el código fuente que pueden ser expuestas al público o reutilizadas indebidamente.
@@ -287,7 +290,7 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 ---
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
 
 1. **Password Management: Hard-Coded Password**:
    <div align="center">
@@ -317,14 +320,14 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 --- 
 
-#### 4. Time and State
+### 4. Time and State
 
 **Time and State** se centra en errores derivados de la interacción entre procesos, hilos y el sistema operativo en entornos de computación distribuida o concurrente. Estos problemas suelen surgir debido a inconsistencias en el manejo del estado compartido o al tiempo de ejecución no controlado. Los defectos en esta categoría pueden causar fallos críticos, como bloqueos permanentes (deadlocks) o condiciones de carrera (race conditions), que afectan la disponibilidad y el correcto funcionamiento del sistema.
 
 ---
 
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 
 1. **Deadlock**
    - **Vulnerabilidad**: Un deadlock ocurre cuando dos o más procesos o hilos esperan indefinidamente a que el otro libere un recurso, lo que detiene completamente la ejecución.
@@ -334,7 +337,12 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
 
 ---
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
+
+<div align="center">
+    <img src="readme-assets/deadlock-example.png" alt="Deadlock Example" width="775"/>
+    <p><em>Figura 9: Ejemplo de bloqueo mutuo entre dos hilos que resulta en un deadlock.</em></p>
+</div>
 
 1. **Sin Manejo de Deadlock**:
     - Los hilos intentan adquirir recursos en órdenes contradictorios, lo que lleva al bloqueo permanente.
@@ -344,16 +352,11 @@ Exception Handling** pueden comprometer la seguridad y funcionalidad de un progr
     - El uso de un orden consistente en la adquisición de recursos previene el bloqueo.
     - Los hilos completan su tarea sin interrupciones.
 
-<div align="center">
-    <img src="readme-assets/deadlock-example.png" alt="Deadlock Example" width="775"/>
-    <p><em>Figura 9: Ejemplo de bloqueo mutuo entre dos hilos que resulta en un deadlock.</em></p>
-</div>
-
 Este ejemplo destaca la importancia de manejar correctamente los bloqueos en entornos concurrentes, especialmente en sistemas distribuidos o multi-hilo. Una planificación adecuada y el uso de herramientas como `timeout` o algoritmos de detección de deadlocks pueden ser posibles soluciones. 
 
 ---
 
-#### 5. Errors
+### 5. Errors
 
 **Errors** abarca vulnerabilidades relacionadas con el manejo incorrecto de errores o la falta de manejo de los mismos. Este tipo de vulnerabilidades puede resultar en un comportamiento inesperado, pérdida de datos o incluso una brecha de seguridad al exponer información sensible.
 
@@ -361,7 +364,7 @@ En esta sección se aborda el impacto de ignorar o manejar incorrectamente los e
 
 ---
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 1. **Empty Catch Block**
 - **Vulnerabilidad**: Ignorar excepciones o errores, lo que permite que el programa continúe en un estado potencialmente inseguro o con información incorrecta.
 - **Descripción**: Este ejemplo compara un manejo inadecuado de excepciones (bloques de captura vacíos) con una gestión robusta, que registra errores y permite la recuperación o el cierre seguro de recursos.
@@ -370,7 +373,12 @@ En esta sección se aborda el impacto de ignorar o manejar incorrectamente los e
 
 ---
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
+
+<div align="center">
+    <img src="readme-assets/empty-catch-block-comparison.png" alt="Empty Catch Block Example" width="1050"/>
+    <p><em>Figura 10: Comparación entre el manejo seguro e inseguro de excepciones en Python.</em></p>
+</div>
 
 1. **Enfoque Inseguro**:
    - Excepciones ignoradas en un bloque de captura vacío.
@@ -381,18 +389,12 @@ En esta sección se aborda el impacto de ignorar o manejar incorrectamente los e
    - Las excepciones se registran y gestionan de manera explícita.
    - La ejecución puede ser detenida o redirigida a una ruta alternativa para mitigar el problema.
    - Uso de mensajes de registro para ayudar a la depuración.
-
-<div align="center">
-    <img src="readme-assets/empty-catch-block-comparison.png" alt="Empty Catch Block Example" width="1050"/>
-    <p><em>Figura 10: Comparación entre el manejo seguro e inseguro de excepciones en Python.</em></p>
-</div>
-
 ---
 
 En el caso inseguro, el error puede es silenciado completamente, dejando al programa en un estado incierto y sin información útil para los desarrolladores. En el caso seguro, se asegura que todos los errores se gestionen o registren para mitigar su impacto. 
 
 
-#### 6. Code Quality
+### 6. Code Quality
 
 **Code Quality** se refiere a prácticas de desarrollo deficientes que pueden derivar en comportamientos impredecibles y vulnerabilidades de seguridad. Desde un punto de vista del usuario, esto podría manifestarse como errores o fallos inesperados. Sin embargo, para un atacante, estas deficiencias representan oportunidades para explotar el sistema, desencadenando fallos más graves como corrupción de memoria, fugas de información, o incluso la ejecución de código malicioso.
 
@@ -400,7 +402,7 @@ En esta sección, se abordan cinco ejemplos clásicos de problemas relacionados 
 
 ---
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 
 1. **Double Free**
    - **Descripción**: Liberar dos veces un mismo bloque de memoria puede causar corrupción de memoria, lo que puede ser aprovechado para desbordar buffers u otros ataques.
@@ -465,7 +467,7 @@ de memoria debido a la falta de liberación explícita con <code>delete[]</code>
 
 ---
 
-##### Ejecución y Análisis
+#### Ejecución y Análisis
 
 Los ejemplos han sido diseñados para ejecutarse en entornos Linux con compiladores GCC o Clang. Cada ejemplo puede compilarse utilizando el comando:
 ```shell
@@ -479,7 +481,7 @@ valgrind --leak-check=full --show-leak-kinds=all ./<output_file>
 ```
 
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
 
 1. **Enfoque Inseguro**:
    - En cada caso, el programa demuestra cómo la mala calidad del código puede llevar a fallos críticos.
@@ -493,7 +495,7 @@ valgrind --leak-check=full --show-leak-kinds=all ./<output_file>
 
 ---
 
-#### 7. Encapsulation
+### 7. Encapsulation
 
 **Encapsulation** trata sobre establecer límites claros en el manejo y acceso de datos para evitar fugas de información, accesos indebidos y comportamientos inesperados. Este principio es fundamental para garantizar que cada componente de un sistema maneje únicamente los datos que necesita y de la manera esperada, protegiendo la privacidad y la seguridad de los usuarios.
 
@@ -501,7 +503,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
 ---
 
-##### Problemas Seleccionados
+#### Problemas Seleccionados
 
 1. **Trust Boundary Violation**
    - **Vulnerabilidad**: Combinar datos confiables y no confiables en una misma estructura puede generar errores de validación, lo que permite que datos maliciosos se traten como válidos.
@@ -523,7 +525,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
 ---
 
-##### Comparativa de Resultados
+#### Comparativa de Resultados
 
 1. **Trust Boundary Violation**:
    <div align="center">
@@ -556,7 +558,7 @@ Las vulnerabilidades en esta categoría surgen cuando se debilitan o eliminan es
 
 
 
-### Reflexiones y Conclusiones
+## Reflexiones y Conclusiones
 
 El desarrollo de software seguro es un desafío complejo que combina conocimientos técnicos, buenas prácticas de diseño y una mentalidad orientada a la prevención de riesgos. Este trabajo ha permitido explorar de manera práctica cómo las vulnerabilidades pueden surgir en distintas etapas del ciclo de vida del software, afectando su calidad, seguridad y confiabilidad. A través de ejemplos específicos basados en la taxonomía de los "Seven Pernicious Kingdoms" y el **CWE/SANS Top 25**, se evidencia cómo pequeños descuidos en la validación de entradas, el manejo de recursos o la encapsulación pueden comprometer sistemas completos.
 
@@ -572,7 +574,7 @@ En conclusión, este trabajo pone de manifiesto que el desarrollo de software se
 
 ---
 
-### Bibliografía
+## Bibliografía
 
 En esta sección se enumeran las referencias utilizadas para analizar las vulnerabilidades y conceptos tratados en el
 trabajo:
